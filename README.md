@@ -1,42 +1,37 @@
+What is e?
+=============
 
--------------
-What is "e" ?
--------------
+e is an evaluator for arithmetic expressions like `3*log(pi+10!)`, 
 
-"e" is a full expression evaluator in under 10k of code.You can evaluate any
-arithmetic expression like 3*log(pi+10!) .
+It doesn't need bison or anything else other than a C compiler. In fact it is a recursive descent parser with one character lookahead.
 
-It doesn't need bison or anything else other than a C compiler. In fact it is
-a recursive-descent parser with one character look-ahead.
+e's original author is Apostolos Dimitromanolakis. Later, some idiot named Casey found it and put it on github.
 
-------------------------------------------------------------
 Why does "e --.+*.*^.+.--e^" work and why does it return -1?
-------------------------------------------------------------
+============================================================
 
 Read the questions at the bottom!
 
--------------------
 What is supported ?
--------------------
+===================
 
-First of all you can use '[' instead of '(' and ']' instead of ')'. This is
-to avoid using quotes when writing an expression at the command line. For 
-example, instead of:
+First of all you can use '[' instead of '(' and ']' instead of ')'. This is to avoid using quotes when writing an expression at the command line. For example, instead of:
 
-$ e '5*log(2+3)'
+`$ e '5*log(2+3)'`
 
-you can use the following (which is 2 keystrokes and 2 shifts shorter)
+you can use the following (which is 2 keystrokes and 2 shifts shorter):
 
-$ e 5*log[2+3]
+`$ e 5*log[2+3]`
 
-Also you can omit the parenthesis of a function, for example
+You can also omit the parenthesis of a function, for example:
 
-$ e log1+log2+log3
+`$ e log1+log2+log3`
 
 Finally you can use the usual notation 5e7 = 5 * 10^7.
 
 Ok, now what is available...
 
+```
 operators   explanation                 evaluation        precedence
 ---------   -----------                 ----------        ----------
  + -        add,subtract                left to right     lower
@@ -59,57 +54,52 @@ asin, acos, atan            like <math.h>
 asinh, acosh, atanh         like <math.h>
 ln                          natural logarithm (base e)
 log                         base 2 logarithm (log256 = 8)
+```
 
-
-
----------------------------------------------------------
 Why does "e +" work and why does it return 0?
----------------------------------------------------------
+=============================================
 
 Read the next question.
 
----------------------------------------------------------
 Why does "e 5+" work and why does it return 5?
----------------------------------------------------------
+==============================================
 
-Have you ever wondered why +5 is a valid expression and 5+ isn't?
-Read the next question.
+Have you ever wondered why +5 is a valid expression and 5+ isn't?  Read the next question.
 
----------------------------------------------------------
 Why doesn't "e " return 0 instead of a help message?
----------------------------------------------------------
+====================================================
 
 Read on...
 
----------------------------------------------------
 How many 1-digit numbers are there in the universe?
----------------------------------------------------
+===================================================
 
 Pause for a moment and think..
 Ok so, deep in the mathematical universe, there are...
 
+```
 9000   4 digit numbers     (from 1000 to 9999)
  900   3 digit numbers     (from 100 to 999)
   90   2 digit numbers     (from 10 to 99)
+```
 
 Therefore you should have guessed that we have...
 
+```
    9   1 digit numbers     (from 1 to 9)
+```
 
---------------------------------------------
 Ok, if 0 isn't a 1-digit number, what is it?
---------------------------------------------
+============================================
 
-It is a 0-digit number! That means you don't have to write anything when 
-you want 0. Writing '0' for 0 is like writing '04' for 4.
+It is a 0-digit number! That means you don't have to write anything when you want 0. Writing '0' for 0 is like writing '04' for 4.
 
-So when we write
+So when we write:
 
-+
+`+`
 
-it is equivalent to
+it is equivalent to:
 
-0+0 
+`0+0`
 
 I hope everything is clear now! (for example e^ = e^0 = 1)
-
