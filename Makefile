@@ -1,15 +1,17 @@
 #! make -f
 
-e: e.c
-	gcc -O2 -s -o e e.c -lm
+VERSION     = 0.02718
+DISTFILES   = EXAMPLES LICENSE GRAMMAR README.md Makefile e.c e
+DISTDIR     = e-$(VERSION)
+DISTARCHIVE = $(DISTDIR).tar.gz
 
-VERSION = 0.02718
-DISTFILES = EXAMPLES LICENSE GRAMMAR README.md e e.c makefile
+e: e.c
+	gcc -lm -o e e.c
 
 dist: e
-	mkdir e-$(VERSION)
-	cp $(DISTFILES) e-$(VERSION)
-	tar cvzf e-$(VERSION).tar.gz e-$(VERSION)
+	mkdir $(DISTDIR)
+	cp $(DISTFILES) $(DISTDIR)
+	tar cvzf $(DISTARCHIVE) $(DISTDIR)
 
 clean:
-	rm -rf e e-$(VERSION) e-$(VERSION).tar.gz
+	rm -rf e $(DISTDIR) $(DISTARCHIVE)
