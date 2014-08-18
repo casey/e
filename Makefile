@@ -5,7 +5,7 @@ DISTFILES   = EXAMPLES LICENSE GRAMMAR README.md Makefile e.c e
 DISTDIR     = e-$(VERSION)
 DISTARCHIVE = $(DISTDIR).tar.gz
 
-e: e.c
+e: Makefile e.c
 	gcc -lm -o e e.c
 
 dist: e
