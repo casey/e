@@ -4,6 +4,8 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+#include <string.h>
 
 typedef double type;  
 
@@ -167,6 +169,9 @@ type term()
 					
 	else if(c >= 'a' && c <= 'z')
 					return m * function();
+
+  /* exit to silence warnings */
+  exit(1);
 }
 
 
@@ -243,7 +248,7 @@ format(type X)
 	type i,f;
 	int d;
 	
-	if(!finite(X)) { printf("%f", X); return ; }
+	if(!isfinite(X)) { printf("%f", X); return ; }
 	
 	f = fabs(modf(X,&i));
 	d = floor(log10(fabs(X)))+1;
@@ -252,7 +257,7 @@ format(type X)
 		
 	/* printf("%.30f\n",(X)); */
 	
-	if(finite(f) && f!=0)
+	if(isfinite(f) && f!=0)
 		{
 			char *p, s[2000], t[2000];
 			
