@@ -1,18 +1,12 @@
-
-/* vi:set ts=2: */
-/* tab size is 2 */
-
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
-typedef double type;  
-
-char c;
-
 int argc, arg;
-char **argv, *p;
+char **argv, *p, c;
+
+typedef double type;
 
 void next()
 {
