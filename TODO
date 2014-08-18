@@ -7,6 +7,9 @@
 - can I change gcc to cc in makefile?
 - remove the #define
 - switch to long double
+- make syntax error message line up exactly
+- fix "e '(log(10)'"
+- add proper release and figure out how to increment version number
 
 - crazy features:
   . user defined functions
