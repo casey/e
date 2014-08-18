@@ -10,4 +10,6 @@ dist: e
 	mkdir e-$(VERSION)
 	cp $(DISTFILES) e-$(VERSION)
 	tar cvzf e-$(VERSION).tar.gz e-$(VERSION)
-	
+
+clean:
+	rm -rf e e-$(VERSION) e-$(VERSION).tar.gz
