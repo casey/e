@@ -1,5 +1,5 @@
 What is e?
-=============
+==========
 
 e is an evaluator for arithmetic expressions like `3*log(pi+10!)`, 
 
@@ -8,12 +8,12 @@ It doesn't need bison or anything else other than a C compiler. In fact it is a 
 e's original author is Apostolos Dimitromanolakis. Later, some idiot named Casey found it and put it on github.
 
 Why does "e --.+*.*^.+.--e^" work and why does it return -1?
-============================================================
+------------------------------------------------------------
 
 Read the questions at the bottom!
 
 What is supported ?
-===================
+-------------------
 
 First of all you can use '[' instead of '(' and ']' instead of ')'. This is to avoid using quotes when writing an expression at the command line. For example, instead of:
 
@@ -57,22 +57,22 @@ log                         base 2 logarithm (log256 = 8)
 ```
 
 Why does "e +" work and why does it return 0?
-=============================================
+---------------------------------------------
 
 Read the next question.
 
 Why does "e 5+" work and why does it return 5?
-==============================================
+----------------------------------------------
 
 Have you ever wondered why +5 is a valid expression and 5+ isn't?  Read the next question.
 
 Why doesn't "e " return 0 instead of a help message?
-====================================================
+----------------------------------------------------
 
 Read on...
 
 How many 1-digit numbers are there in the universe?
-===================================================
+---------------------------------------------------
 
 Pause for a moment and think..
 Ok so, deep in the mathematical universe, there are...
@@ -90,7 +90,7 @@ Therefore you should have guessed that we have...
 ```
 
 Ok, if 0 isn't a 1-digit number, what is it?
-============================================
+--------------------------------------------
 
 It is a 0-digit number! That means you don't have to write anything when you want 0. Writing '0' for 0 is like writing '04' for 4.
 
