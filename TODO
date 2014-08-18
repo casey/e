@@ -1,0 +1,12 @@
+- add a bunch of tests to be sure that behavior doesn't change
+- remove comments
+- make formatting as concise as possible
+- add a debug compilation mode which is as strict and pedantic as possible
+- add a release compilation mode with optimizes as much as possible
+- use puts instead of printf
+- can I change gcc to cc in makefile?
+- remove the #define
+- switch to long double
+
+- crazy features:
+  . user defined functions
