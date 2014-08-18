@@ -1,0 +1,33 @@
+
+
+If you can read this then you can understand the code, as every symbol is a
+function in the source. Of course S is the starting symbol.
+
+
+S -> E
+
+E -> F
+E -> E '+' F
+E -> E '-' F
+
+F -> G
+F -> F '*' G
+F -> F '/' G
+F -> F '%' G
+
+G -> H
+G -> H '^' G
+
+H -> term
+H -> term '!'
+
+term -> left_par E right_par
+term -> constant
+term -> function
+
+left_par  -> '('
+left_par  -> '['
+
+right_par -> ')'
+right_par -> ']'
+
