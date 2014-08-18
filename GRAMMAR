@@ -1,8 +1,5 @@
-
-
-If you can read this then you can understand the code, as every symbol is a
-function in the source. Of course S is the starting symbol.
-
+If you can read this then you can understand the code! Every symbol is a
+function in the source. S is the starting symbol.
 
 S -> E
 
@@ -30,4 +27,3 @@ left_par  -> '['
 
 right_par -> ')'
 right_par -> ']'
-
