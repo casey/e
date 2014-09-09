@@ -5,7 +5,7 @@ e is an evaluator for arithmetic expressions like `3*log(pi+10!)`,
 
 It doesn't need bison or anything else other than a C compiler. In fact it is a recursive descent parser with one character lookahead.
 
-e's original author is Apostolos Dimitromanolakis. Later, some idiot named Casey found it and put it on github.
+e's author is Apostolos Dimitromanolakis. Later, some idiot named Casey found it and put it on github.
 
 Why does "e --.+*.*^.+.--e^" work and why does it return -1?
 ------------------------------------------------------------
